@@ -1,4 +1,4 @@
-.pokemons { //estilo lista
+.pokemons {
     display: grid;
     grid-template-columns: 1fr;
     margin: 0;
@@ -55,7 +55,7 @@
 }
 
 @media screen and (min-width: 380px) {
-    .pokemons { //estilo lista mobile
+    .pokemons {
         grid-template-columns: 1fr 1fr;
     }
 }
