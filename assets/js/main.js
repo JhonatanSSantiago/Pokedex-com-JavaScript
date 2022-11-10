@@ -1,22 +1,40 @@
-function convertPokemonToLi(pokemon) {
-    return `
-                <li class="pokemon ${pokemon.tipo_principal}">
-                    <span class="number">#${pokemon.numero}</span>
-                    <span class="name">${pokemon.nome}</span>
+const pokemonList = document.getElementById('pokemonList');
+const bProxima = document.getElementById('proxima');
+const limit = 20;
+let offset = 0;
 
-                    <div class="detail">
-                        <ol class="types">
-                            ${pokemon.tipos.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
-                        </ol>
-                        <img src="${pokemon.imagem}"
-                            alt="${pokemon.nome}">
-                    </div>
-                </li>
-            `
+
+function goToPage(offset, limit){
+
+    
+    function convertPokemonToLi(pokemon) {
+            return `
+                        <li class="pokemon ${pokemon.tipo_principal}">
+                            <span class="number">#${pokemon.numero}</span>
+                            <span class="name">${pokemon.nome}</span>
+
+                            <div class="detail">
+                                <ol class="types">
+                                    ${pokemon.tipos.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
+                                </ol>
+                                <img src="${pokemon.imagem}"
+                                    alt="${pokemon.nome}">
+                            </div>
+                        </li>
+                    `
+        }
+
+    pokeApi.getPokemon(offset, limit).then((pokemons = []) => {
+        const newHtml = pokemons.map(convertPokemonToLi).join('')
+        pokemonList.innerHTML = newHtml
+        
+    })
 }
 
-const pokemonList = document.getElementById('pokemonList')
+goToPage(offset, limit);
 
-pokeApi.getPokemon().then((pokemons = []) => {
-    pokemonList.innerHTML += pokemons.map(convertPokemonToLi).join('')
+bProxima.addEventListener('click', () => {
+    offset += limit;
+    goToPage(offset, limit);
 })
+

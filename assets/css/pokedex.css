@@ -128,6 +128,20 @@
     height: 70px;
 }
 
+.pagin {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+}
+
+button {
+    padding: 0.5rem;
+    margin: 0.5rem;
+}
+
 @media screen and (min-width: 380px) {
     .pokemons {
         grid-template-columns: 1fr 1fr;
