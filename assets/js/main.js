@@ -40,7 +40,12 @@ bProxima.addEventListener('click', () => {
 })
 
 bRetornar.addEventListener('click', () => {
-    offset -= limit
-    goToPage(offset, limit);
+    if(offset <= 0){
+        offset = 0;
+    }else{
+        offset -= limit
+        goToPage(offset, limit);
+    }
+   
 })
 
