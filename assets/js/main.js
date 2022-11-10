@@ -1,5 +1,6 @@
 const pokemonList = document.getElementById('pokemonList');
 const bProxima = document.getElementById('proxima');
+const bRetornar = document.getElementById('anterior');
 const limit = 20;
 let offset = 0;
 
@@ -35,6 +36,11 @@ goToPage(offset, limit);
 
 bProxima.addEventListener('click', () => {
     offset += limit;
+    goToPage(offset, limit);
+})
+
+bRetornar.addEventListener('click', () => {
+    offset -= limit
     goToPage(offset, limit);
 })
 
