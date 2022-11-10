@@ -1,7 +1,7 @@
 const pokemonList = document.getElementById('pokemonList');
 const bProxima = document.getElementById('proxima');
 const bRetornar = document.getElementById('anterior');
-const limit = 20;
+const limit = 12;
 let offset = 0;
 
 
