@@ -4,5 +4,7 @@ class Pokemon {
     tipo_principal;
     tipos = [];
     imagem;
+    alt;
+    peso;
 
 }

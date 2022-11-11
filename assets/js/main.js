@@ -13,14 +13,15 @@ function goToPage(offset, limit){
                         <li class="pokemon ${pokemon.tipo_principal}">
                             <span class="number">#${pokemon.numero}</span>
                             <span class="name">${pokemon.nome}</span>
-
                             <div class="detail">
                                 <ol class="types">
-                                    ${pokemon.tipos.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
-                                </ol>
+                                    ${pokemon.tipos.map((type) => `<li class="type ${type}">${type}</li>`).join('')}                      
+                                </ol>                                                                                      
                                 <img src="${pokemon.imagem}"
                                     alt="${pokemon.nome}">
                             </div>
+                            <span class="status">height: ${pokemon.alt}</span>
+                            <span class="status">weight: ${pokemon.peso}</span>
                         </li>
                     `
         }

@@ -88,10 +88,12 @@
 }
 
 .pokemon .number {
-    color: #000;
-    opacity: .3;
+   // color: #000;
+   color: black;
+    opacity: .2;
     text-align: right;
     font-size: .625rem;
+
 }
 
 .pokemon .name {
@@ -100,6 +102,11 @@
     text-transform: capitalize;
 }
 
+.pokemon .status {
+    color: #fff;
+    list-style: none;
+    font-size: .10rem;
+}
 .pokemon .detail {
     display: flex;
     flex-direction: row;
