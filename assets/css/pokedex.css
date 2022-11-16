@@ -107,6 +107,7 @@
     list-style: none;
     font-size: .625rem;
 }
+
 .pokemon .detail {
     display: flex;
     flex-direction: row;
