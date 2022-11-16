@@ -105,7 +105,6 @@
 .pokemon .status {
     color: #fff;
     list-style: none;
-    font-size: 10rem;
 }
 .pokemon .detail {
     display: flex;
